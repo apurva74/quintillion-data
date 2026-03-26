@@ -1,0 +1,92 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: linear-gradient(90deg, #0a0f1c, #0f1e35);
+  border-bottom: 2px solid #00f7ff;
+  box-shadow: 0px 4px 15px rgba(0, 255, 180, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.navbar-logo {
+  font-size: 40px;
+  font-family: 'Audiowide', 'Orbitron', sans-serif;
+  font-weight: 700;
+  color: #00eaff;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-shadow: 0px 0px 12px #00eaff, 0px 0px 20px #00ff95;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1);
+  text-shadow: 0px 0px 20px #00ff95, 0px 0px 35px #00eaff;
+}
+
+/* Links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-links li {
+  display: inline-block;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #e0f7fa;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Neon underline effect */
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #00ff95;
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #00ff95;
+  text-shadow: 0 0 8px #00ff95;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* Button */
+.navbar-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #00eaff;
+  color: #0a0f1c;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0px 0px 12px #00eaff;
+}
+
+.navbar-btn:hover {
+  background: #00ff95;
+  box-shadow: 0px 0px 15px #00ff95;
+}
+.navbar-buttons {
+  display: flex;
+  gap: 10px; /* Reduce this value to decrease space between buttons */
+}

@@ -2,18 +2,7 @@ import React, { useState } from "react";
 import { GoogleLogin } from "@react-oauth/google";
 import API from "../../api";
 import "./Register.css";
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import { GoogleOAuthProvider } from "@react-oauth/google";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(
-  <GoogleOAuthProvider clientId="900165407333-kh7bdmhtuatabqjnnvf39f6amnlnv9bp.apps.googleusercontent.com">
-    <App />
-  </GoogleOAuthProvider>
-);
 function Register() {
   const [formData, setFormData] = useState({
     fullName: "",

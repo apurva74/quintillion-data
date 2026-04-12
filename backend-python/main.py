@@ -4,14 +4,20 @@ from routes import router
 
 app = FastAPI()
 
-# ✅ ROOT ROUTE (add this)
+# ✅ ROOT ROUTE
 @app.get("/")
 def home():
     return {"message": "Backend is running successfully"}
 
+# ✅ FIXED CORS
+origins = [
+    "http://localhost:3000",
+    "https://quintillion-data.vercel.app",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
